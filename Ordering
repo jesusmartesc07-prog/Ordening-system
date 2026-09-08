@@ -1,0 +1,44 @@
+pedidos = []
+while True:
+
+     print("1.Mostrar pedidos.")
+     print("2.Agregar pedido.")
+     print("3.Buscar pedido.")
+     print("4.Salir")
+
+     opc = input("selepciona una opcion: " )
+
+     match opc:
+         case "1":
+              for pedido in pedidos:
+                  print(pedido)
+              if not bool(pedidos):
+                   print("No hay pedidos registrados.")
+         case "2":
+                id = int(input("Dame el id: "))
+                cliente = (input("Dame el nombre: "))
+                mesa = input("que mesa: ")
+                producto = input("dame tu producto: ")
+                estado = input("que estado tiene: ")
+
+                pedido = {
+                    "id": id,
+                    "cliente": cliente,
+                    "mesa": mesa,
+                    "producto": producto,
+                    "estado": estado
+                }
+                pedidos.append(pedido)
+
+         case "3":
+            buscar = input("dame el nombre del pedido: ")
+
+            encontrar = False
+
+            for pedido in pedidos:
+                print(pedidos)
+            if not bool(pedidos):
+                print("no hay pedidos registrados")
+         case "4":
+             break
+             
